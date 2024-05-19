@@ -6,6 +6,7 @@ set(TEST_SUBMODULES OFF)
 set(TEST_GS OFF)
 
 add_subdirectory(external/GStreamerInterface)
+add_subdirectory(external/FGSCommon)
 add_subdirectory(external/Qt6Interface)
 add_subdirectory(external/TSML)
 add_subdirectory(external/NL)

@@ -4,3 +4,6 @@
 [submodule "external/TSML"]
 	path = external/TSML
 	url = git@github.com:enessanc/TSML.git
+[submodule "external/FGSCommon"]
+	path = external/FGSCommon
+	url = git@github.com:enessanc/FGSCommon.git
