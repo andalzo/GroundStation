@@ -1,4 +1,4 @@
-find_package(Qt6 COMPONENTS Core Gui Widgets REQUIRED)
+find_package(Qt6 COMPONENTS Core Gui Widgets Multimedia MultimediaWidgets REQUIRED)
 
 if(WIN32)
     set(QT6_PATH "")
@@ -8,8 +8,9 @@ endif()
 add_library(Qt6Interface INTERFACE)
 
 
-# sudo apt install qt6-base-dev !!!
 target_link_libraries(Qt6Interface INTERFACE
         Qt6::Core
         Qt6::Gui
-        Qt6::Widgets)
+        Qt6::Widgets
+        Qt6::Multimedia
+        Qt6::MultimediaWidgets)

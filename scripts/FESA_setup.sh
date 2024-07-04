@@ -15,4 +15,4 @@ echo "Trying to download GTK"
 sudo apt install libgtk-4-dev
 
 echo "Trying to download Qt"
-sudo apt install qt6-base-dev
+sudo apt install qt6-base-dev qt6-multimedia-dev

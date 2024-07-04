@@ -1,3 +1,3 @@
 add_subdirectory(GSServer)
-add_subdirectory(GuiHandler)
+add_subdirectory(Gui)
 add_subdirectory(HTTPClient)
