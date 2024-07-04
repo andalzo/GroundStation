@@ -8,13 +8,12 @@ namespace GS
     class MainWindow final : public QMainWindow
     {
         Q_OBJECT
-
     public:
-        explicit MainWindow(QWidget* parent = nullptr);
+        MainWindow(QWidget* parent = nullptr);
 
     private:
         ComWindow* com_window;
-        ManagementWindow* management_window{};
+        ManagementWindow* management_window = nullptr;
     };
 }
 

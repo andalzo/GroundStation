@@ -7,14 +7,14 @@ namespace GS
     {
         showMaximized();
         com_window = new ComWindow(this);
-        setWindowTitle(QString("FESA Yönetim Sistemi"));
+        setWindowTitle(QString("FESA Management System"));
         setCentralWidget(com_window);
-        const QString styleSheet_file = "ElegantDark.qss";
-        QFile file(styleSheet_file);
-        if (file.open(QFile::ReadOnly))
+        //const QString styleSheet_file = "ElegantDark.qss";
+        //QFile file(styleSheet_file);
+        //if (file.open(QFile::ReadOnly))
         {
-            QString styleSheet = QLatin1String(file.readAll());
-            setStyleSheet(styleSheet);
+            //QString styleSheet = QLatin1String(file.readAll());
+            //setStyleSheet(styleSheet);
         }
     }
 } // GS

@@ -18,7 +18,7 @@ namespace GS
         Q_OBJECT
 
     public:
-        explicit ComWindow(QWidget* parent = nullptr);
+        ComWindow(QWidget* parent = nullptr);
 
     private:
         QHBoxLayout* main_h_layout;
@@ -41,8 +41,8 @@ namespace GS
         QLabel* battery_percent;
 
         QPushButton* start_server_button;
-        QPushButton* open_mw_button;
-        QPushButton* settings_button;
+        QPushButton* open_mw_button{};
+        QPushButton* settings_button{};
     };
 
 } // GS
