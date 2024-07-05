@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.27)
 project(GroundStation)
 
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 set(TEST_SUBMODULES OFF)
 set(TEST_GS OFF)
 
