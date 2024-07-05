@@ -1,20 +1,10 @@
 set(TEST_Gui OFF)
 
-set(SOURCES impl/MainWindow.cpp
-            impl/ManagementWindow.cpp
-            impl/ComWindow.cpp
-)
-
-set(HEADERS include/Gui/MainWindow.h
-            include/Gui/ManagementWindow.h
-            include/Gui/ComWindow.h)
-
-qt6_wrap_cpp(MOC_SOURCES ${HEADERS})
-
-add_library(Gui
+qt6_add_library(Gui
         STATIC
-        ${SOURCES}
-        ${MOC_SOURCES}
+        impl/MainWindow.cpp 
+        impl/ManagementWindow.cpp
+        impl/ComWindow.cpp
 )
 
 
