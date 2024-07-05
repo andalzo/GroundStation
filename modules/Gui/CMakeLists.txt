@@ -1,7 +1,7 @@
 set(TEST_Gui OFF)
 
 qt6_add_library(Gui
-        STATIC
+        SHARED
         impl/MainWindow.cpp 
         impl/ManagementWindow.cpp
         impl/ComWindow.cpp
