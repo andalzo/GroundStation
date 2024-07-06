@@ -6,7 +6,7 @@ add_library(GSServer
 )
 
 target_include_directories(GSServer PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include)
-target_link_libraries(GSServer PUBLIC TSML NL)
+target_link_libraries(GSServer PUBLIC TSML NL FGSCommon)
 
 if(TEST_GSServer)
     add_subdirectory(test)

@@ -6,7 +6,7 @@ add_library(HTTPClient
 )
 
 target_include_directories(HTTPClient PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include)
-target_link_libraries(HTTPClient PUBLIC TSML NL)
+target_link_libraries(HTTPClient PUBLIC TSML NL FGSCommon)
 
 if(TEST_HTTPClient)
     add_subdirectory(test)
