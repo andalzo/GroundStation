@@ -1,6 +1,6 @@
 set(TEST_HTTPClient OFF)
 
-qt6_add_library(HTTPClient
+add_library(HTTPClient
         STATIC
         impl/HTTPClient.cpp
 )

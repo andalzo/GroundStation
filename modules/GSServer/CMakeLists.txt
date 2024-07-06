@@ -1,6 +1,6 @@
 set(TEST_GSServer OFF)
 
-qt6_add_library(GSServer
+add_library(GSServer
         STATIC
         impl/GSServer.cpp
 )

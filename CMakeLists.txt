@@ -1,22 +1,23 @@
 cmake_minimum_required(VERSION 3.27)
-project(GroundStation)
+project(GSBackend)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(TEST_SUBMODULES OFF)
 set(TEST_GS OFF)
 
-add_subdirectory(external/GStreamerInterface)
 add_subdirectory(external/FGSCommon)
-add_subdirectory(external/Qt6Interface)
 add_subdirectory(external/TSML)
 add_subdirectory(external/NL)
 
 add_subdirectory(modules)
 
-if(TEST_GS)
+add_library(GSBackend STATIC
+        source/GSBackend.cpp
+        source/GSBackend.h)
+target_link_libraries(GSBackend PUBLIC GSServer HTTPClient)
 
+if(TEST_GS)
     include(FetchContent)
     FetchContent_Declare(
             googletest
@@ -25,11 +26,5 @@ if(TEST_GS)
 
     FetchContent_MakeAvailable(googletest)
 
-    if(TEST_SUBMODULES)
-
-    else()
-
-    endif()
-else()
-    add_subdirectory(source)
+    add_subdirectory(test)
 endif()
