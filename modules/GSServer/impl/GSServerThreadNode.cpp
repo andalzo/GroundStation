@@ -118,7 +118,7 @@ namespace GS
     {
         if(gs_server->IsRunning())
         {
-            gs_server->Update(-1,true);
+            gs_server->Update(-1,false);
         }
     }
 }
