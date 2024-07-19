@@ -20,7 +20,7 @@ namespace GS
 
     private:
         void OnServerUpdate();
-        GS::GSServerStatus status;
+        GS::GSServerStatus status{};
         std::unique_ptr<GSServer> gs_server;
     };
 }

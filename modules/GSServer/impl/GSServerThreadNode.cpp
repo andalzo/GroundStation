@@ -1,7 +1,16 @@
+#include <utility>
+
 #include "GSServer/GSServerThreadNode.h"
 
 namespace GS
 {
+    GSServerThreadNode::GSServerThreadNode(TSML::TSMLContext<GS::CommonMsg> *context ,std::string node_id)
+        : ThreadNode<CommonMsg, GSServerExceptions>(context, std::move(node_id))
+    {
+        status.port = 18500;
+        status.state = GSServerState::Closed;
+    }
+
     void GSServerThreadNode::SetStatus(const GS::GSServerStatus& status)
     {
         this->status = status;
@@ -9,7 +18,7 @@ namespace GS
 
     void GSServerThreadNode::OnInitialize()
     {
-        gs_server = std::make_unique<GSServer>(this, 18500);
+        gs_server = std::make_unique<GSServer>(this, status.port);
         //TODO: Port can be adjusted by gui.
     }
 
