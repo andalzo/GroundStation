@@ -13,10 +13,11 @@ add_subdirectory(external/NL)
 add_subdirectory(modules)
 
 add_library(GSBackend STATIC
-        source/GSBackend.cpp
-        source/GSBackend.h)
+        include/GSBackend.cpp
+        include/GSBackend.h)
 
 target_link_libraries(GSBackend PUBLIC GSServer HTTPClient)
+target_include_directories(GSBackend PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include)
 
 if(TEST_GS)
     include(FetchContent)
