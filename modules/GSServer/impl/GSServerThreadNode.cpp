@@ -74,6 +74,7 @@ namespace GS
                                 gs_status_message.header.id = GS::CommonMsg::GSServerStatus;
                                 gs_status_message << status.state;
                                 Send("gui",gs_status_message);
+                                break;
                             }
                         case GSServerState::Running:
                             {
@@ -86,6 +87,7 @@ namespace GS
                                 gs_status_message.header.id = GS::CommonMsg::GSServerStatus;
                                 gs_status_message << status.state;
                                 Send("gui",gs_status_message);
+                                break;
                             }
                         case GSServerState::FSClientConnected:
                         case GSServerState::Error:
