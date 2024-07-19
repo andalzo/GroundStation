@@ -10,6 +10,7 @@ namespace GS
     public:
         explicit GSServerThreadNode(TSML::TSMLContext<GS::CommonMsg> *context ,std::string node_id);
         void SetStatus(const GS::GSServerStatus& status);
+        [[nodiscard]] GSServerStatus GetStatus() const;
 
     protected:
         void OnInitialize() override;

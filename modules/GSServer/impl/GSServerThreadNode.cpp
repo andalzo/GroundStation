@@ -16,6 +16,11 @@ namespace GS
         this->status = status;
     }
 
+    GSServerStatus GSServerThreadNode::GetStatus() const
+    {
+        return status;
+    }
+
     void GSServerThreadNode::OnInitialize()
     {
         gs_server = std::make_unique<GSServer>(this, status.port);
