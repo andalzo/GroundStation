@@ -3,6 +3,8 @@ set(TEST_GSServer OFF)
 add_library(GSServer
         STATIC
         impl/GSServer.cpp
+        impl/GSServerThreadNode.cpp
+        include/GSServer/GSServerException.h
 )
 
 target_include_directories(GSServer PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include)

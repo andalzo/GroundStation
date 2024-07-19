@@ -15,6 +15,7 @@ add_subdirectory(modules)
 add_library(GSBackend STATIC
         source/GSBackend.cpp
         source/GSBackend.h)
+
 target_link_libraries(GSBackend PUBLIC GSServer HTTPClient)
 
 if(TEST_GS)
