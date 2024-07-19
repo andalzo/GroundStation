@@ -2,7 +2,7 @@
 
 namespace GS
 {
-    GSBackend::GSBackend(TSML::TSMLContext<CommonMsg>* context) : gs_server_thread_node(context)
+    GSBackend::GSBackend(TSML::TSMLContext<CommonMsg>* context) : gs_server_thread_node(context, "GSServer")
     {
         this->context = context;
     }

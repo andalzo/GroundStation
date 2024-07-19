@@ -8,7 +8,7 @@ namespace GS
     class GSServerThreadNode final : public TSML::ThreadNode<GS::CommonMsg, GSServerExceptions>
     {
     public:
-        explicit GSServerThreadNode(TSML::TSMLContext<GS::CommonMsg> *context ,std::string node_id = "GSServer");
+        explicit GSServerThreadNode(TSML::TSMLContext<GS::CommonMsg> *context ,std::string node_id);
         void SetStatus(const GS::GSServerStatus& status);
 
     protected:
