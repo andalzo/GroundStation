@@ -29,6 +29,8 @@ namespace GS
             case GSServerState::Closed:
                 break;
             case GSServerState::Running:
+                OnServerUpdate();
+                break;
             case GSServerState::FSClientConnected:
                 OnServerUpdate();
                 break;
