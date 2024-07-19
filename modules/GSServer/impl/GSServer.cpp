@@ -37,6 +37,14 @@ namespace GS
 
     void GSServer::OnClientDisconnect(std::shared_ptr<NL::Connection<FGS::CommonMsg>> client)
     {
+        GSServerStatus status = gs_server_thread_node->GetStatus();
+        status.state = GSServerState::Running;
+        gs_server_thread_node->SetStatus(status);
+
+        TSML::Message<CommonMsg> msg;
+        msg.header.id = CommonMsg::GSServerStatus;
+        msg << status.state;
+        gs_server_thread_node->Send("gui",msg);
 
     }
 } // GS
