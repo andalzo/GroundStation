@@ -1,4 +1,4 @@
-#FESA : GSBackend Software Project
+# FESA : GSBackend Software Project
 DISCLAIMER: This project was developed by the FESA Electronics & Software subteam for the TEKNOFEST Fighter UAV competition. Although the team successfully reached the final stage, 
 the project could not be completed due to unexpected delays in material procurement and an underestimation of the workload by team members. However, for future reference and further 
 development, we have decided to make our incomplete work available to the open-source community. Half of the software has been implemented, and the system design is nearly complete.
@@ -12,8 +12,10 @@ GSBackend is one of the four main repositories of the FESA project. This softwar
 FlightStation software running on the UAV and the competency server within an intranet, using the HTTP protocol. Additionally, this software is responsible for calculating 
 optimal route parameters using specialized pathfinding algorithms.
 
-##FESA Avionic System Design
-##FESA Sofware System Design
+## FESA Avionic System Design
 
-###GSServer Module System Design
-###HTTPHandler Module System Design
+## FESA Sofware System Design
+
+### GSServer Module System Design
+
+### HTTPHandler Module System Design
