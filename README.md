@@ -12,10 +12,3 @@ GSBackend is one of the four main repositories of the FESA project. This softwar
 FlightStation software running on the UAV and the competency server within an intranet, using the HTTP protocol. Additionally, this software is responsible for calculating 
 optimal route parameters using specialized pathfinding algorithms.
 
-## FESA Avionic System Design
-
-## FESA Sofware System Design
-
-### GSServer Module System Design
-
-### HTTPHandler Module System Design
